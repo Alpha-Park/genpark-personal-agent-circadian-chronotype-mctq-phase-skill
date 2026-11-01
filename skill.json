@@ -1,0 +1,26 @@
+{
+  "name": "genpark-personal-agent-circadian-chronotype-mctq-phase-skill",
+  "version": "1.0.0",
+  "description": "Computes Munich ChronoType Questionnaire (MCTQ) mid-sleep phase (MSFsc), quantifies social jetlag, and projects circadian physiological phase windows.",
+  "tools": [
+    {
+      "name": "calculate_mctq_chronotype_and_social_jetlag",
+      "description": "Calculates MCTQ mid-sleep phase (MSFsc), social jetlag, and cardiometabolic risk.",
+      "parameters": {
+        "sleep_onset_work_24h": "float (default 23.5)",
+        "sleep_wake_work_24h": "float (default 7.0)",
+        "sleep_onset_free_24h": "float (default 1.0)",
+        "sleep_wake_free_24h": "float (default 9.5)",
+        "workdays_per_week": "int (default 5)"
+      }
+    },
+    {
+      "name": "project_circadian_phase_windows",
+      "description": "Projects CAR peak, peak analytical focus, DLMO onset, and caffeine cutoff windows.",
+      "parameters": {
+        "target_wake_time_24h": "float (default 7.0)",
+        "target_bedtime_24h": "float (default 23.0)"
+      }
+    }
+  ]
+}
